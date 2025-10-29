@@ -132,6 +132,10 @@
 	icon = 'icons/obj/weapons/guns/ballistic.dmi'
 	desc = "A gold plated Desert Eagle folded over a million times by superior martian gunsmiths. Uses .454 Trucidator ammo."
 
+/obj/item/gun/ballistic/automatic/pistol/clandestine
+	suppressor_x_offset = 17
+	suppressor_y_offset = 1
+
 /obj/item/gun/ballistic/automatic/pistol/clandestine/fisher
 	icon = 'icons/obj/weapons/guns/ballistic.dmi'
 
