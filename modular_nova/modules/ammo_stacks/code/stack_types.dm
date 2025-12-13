@@ -221,6 +221,30 @@
 	ammo_type = /obj/item/ammo_casing/c40sol/pierce
 	icon_state = "stack_spec"
 
+// 12mm Chinmoku
+
+/obj/item/ammo_box/magazine/ammo_stack/c12chinmoku
+	name = "12mm Chinmoku casings"
+	desc = "A stack of 12mm Chinmoku cartridges."
+	caliber = CALIBER_12MMCHINMOKU
+	ammo_type = /obj/item/ammo_casing/c12chinmoku
+	max_ammo = 15
+	casing_w_spacing = 2
+	casing_z_padding = 6
+
+/obj/item/ammo_box/magazine/ammo_stack/c12chinmoku/prefilled
+	start_empty = FALSE
+
+/obj/item/ammo_box/magazine/ammo_stack/c12chinmoku/prefilled/special
+	name = "12mm Chinmoku special casings"
+	ammo_type = /obj/item/ammo_casing/c12chinmoku/special
+	icon_state = "stack_spec"
+
+/obj/item/ammo_box/magazine/ammo_stack/c12chinmoku/prefilled/tracer
+	name = "12mm Chinmoku tracer casings"
+	ammo_type = /obj/item/ammo_casing/c12chinmoku/tracer
+	icon_state = "stack_spec"
+
 // .310 strilka
 
 /obj/item/ammo_casing/strilka310

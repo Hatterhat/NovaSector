@@ -9,6 +9,9 @@
 /// Standard Sol pistol caliber
 #define CALIBER_SOL35SHORT ".35 Sol Short"
 
+/// Subsonic Sol rifle caliber
+#define CALIBER_12MMCHINMOKU "12mm Chinmoku"
+
 /// Basically 20mm grenades, I'd be concerned if a grenade launcher didn't use this
 #define CALIBER_980TYDHOUER ".980 Tydhouer"
 

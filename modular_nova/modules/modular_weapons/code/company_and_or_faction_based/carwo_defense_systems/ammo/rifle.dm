@@ -190,3 +190,76 @@
 	icon_state = "40box_flame"
 
 	ammo_type = /obj/item/ammo_casing/c40sol/incendiary
+
+// 12mm Chinmoku, slow bullets for use with suppressed weapons
+
+/obj/item/ammo_casing/c12chinmoku
+	name = "12mm Chinmoku lethal bullet casing"
+	desc = "A modified .40 Sol Long bullet, with less powder to make it subsonic and a larger round to compensate. \
+		Made for use in modified Sol rifle magazines. Unlike its older sibling, it has a metal casing."
+
+	icon = 'modular_nova/modules/modular_weapons/icons/obj/company_and_or_faction_based/carwo_defense_systems/ammo.dmi'
+	icon_state = "chinmoku"
+
+	caliber = CALIBER_12MMCHINMOKU
+	projectile_type = /obj/projectile/bullet/c12chinmoku
+
+	ammo_stack_type = /obj/item/ammo_box/magazine/ammo_stack/c12chinmoku
+
+/obj/projectile/bullet/c12chinmoku
+	name = "12mm Chinmoku bullet"
+	damage = 40
+	spread = 2
+
+	wound_bonus = 10
+	exposed_wound_bonus = 10
+
+	damage_falloff_tile = -3
+	speed = 1.2
+
+// Chinmoku "special", with armor piercing but more damage falloff
+
+/obj/item/ammo_casing/c12chinmoku/special
+	name = "12mm Chinmoku 'kenka-ya' bullet casing" // brawler ammo
+	desc = parent_type::desc + " This is a special purpose variant designed for \
+		close-range fighting and defeating heavy armor, \
+		though the additional weight means the projectile loses its strength faster."
+	icon_state = "chinmoku_special"
+
+	projectile_type = /obj/projectile/bullet/c12chinmoku/special
+
+/obj/projectile/bullet/c12chinmoku/special
+	name = "12mm Chinmoku 'kenka-ya' bullet"
+	damage = 40
+	armour_penetration = 30
+	spread = 4
+
+	damage_falloff_tile = -4
+
+// Chinmoku tracer, the same as regular chinmoku but it looks cool in the dark
+
+/obj/item/ammo_casing/c12chinmoku/tracer
+	name = "12mm Chinmoku tracer bullet casing"
+	desc = parent_type::desc + " This has a bright green tracer built into the tip, which isn't as great for stealth \
+		but helps with target acquisition in the dark."
+
+	icon_state = "chinmoku_tracer"
+
+	projectile_type = /obj/projectile/bullet/c12chinmoku/tracer
+
+/obj/projectile/bullet/c12chinmoku/tracer
+	name = "12mm Chinmoku tracer bullet"
+	icon = 'modular_nova/modules/modular_weapons/icons/obj/projectiles.dmi'
+	icon_state = "tracer_green"
+
+	light_system = OVERLAY_LIGHT
+	light_range = 1
+	light_power = 1.4
+	light_color = COLOR_VIBRANT_LIME
+
+/obj/projectile/bullet/c12chinmoku/tracer/update_overlays()
+	. = ..()
+	var/mutable_appearance/emissive_overlay = emissive_appearance(icon, icon_state, src)
+	emissive_overlay.transform = transform
+	emissive_overlay.alpha = alpha
+	. += emissive_overlay

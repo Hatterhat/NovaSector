@@ -40,7 +40,7 @@
 		loaded_projectile.range = firing_launcher.target_range
 	else if(istype(fired_from, /obj/item/gun/ballistic/shotgun/shell_launcher))
 		loaded_projectile.range = 5
-	else if(istype(fired_from, /obj/item/gun/ballistic/pump_launcher/c980))
+	else if(istype(fired_from, /obj/item/gun/ballistic/pump_launcher/c980) || istype(fired_from, /obj/item/gun/ballistic/revolver/grenadelauncher/tydhouer))
 		loaded_projectile.range = get_dist(user, target)
 	. = ..()
 

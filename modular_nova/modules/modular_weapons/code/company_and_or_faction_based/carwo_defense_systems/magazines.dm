@@ -121,3 +121,40 @@
 
 /obj/item/ammo_box/magazine/c980_grenade/drum/thunderdome_gas
 	ammo_type = /obj/item/ammo_casing/c980grenade/riot
+
+// Modified .40 Sol rifle magazines to fit 12mm chinmoku
+
+/obj/item/ammo_box/magazine/c12chinmoku
+	name = "\improper Chinmoku short magazine"
+	desc = "A shortened magazine for SolFed rifles, holds fifteen rounds. \
+		This one has been modified to fit the dimensionally-close-enough 12mm Chinmoku casings. \
+		A white line has been added to indicate you should not try using this in standard Sol rifles."
+
+	icon = 'modular_nova/modules/modular_weapons/icons/obj/company_and_or_faction_based/carwo_defense_systems/ammo.dmi'
+	icon_state = "suprifle_short"
+
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+
+	w_class = WEIGHT_CLASS_TINY
+
+	ammo_type = /obj/item/ammo_casing/c12chinmoku
+	caliber = CALIBER_12MMCHINMOKU
+	max_ammo = 15
+
+/obj/item/ammo_box/magazine/c12chinmoku/starts_empty
+	start_empty = TRUE
+
+/obj/item/ammo_box/magazine/c12chinmoku/standard
+	name = "\improper Chinmoku magazine"
+	desc = "A standard size magazine for SolFed rifles, holds thirty rounds. \
+		This one has been modified to fit the dimensionally-close-enough 12mm Chinmoku casings. \
+		A white line has been added to indicate you should not try using this in standard sol rifles."
+
+	icon_state = "suprifle_standard"
+
+	w_class = WEIGHT_CLASS_SMALL
+
+	max_ammo = 30
+
+/obj/item/ammo_box/magazine/c12chinmoku/standard/starts_empty
+	start_empty = TRUE
